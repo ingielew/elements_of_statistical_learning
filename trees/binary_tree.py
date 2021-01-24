@@ -37,6 +37,22 @@ class BinaryTree:
         else:
             raise Exception("BinaryTree: Duplicated value")
 
+    def print_tree(self):
+        this_level = [self.root_node]
+
+        level = 0
+        while this_level:
+            print('Tree level', level)
+            next_level = list()
+            for nodes in this_level:
+                print(nodes)
+                if nodes.left is not None:
+                    next_level.append(nodes.left)
+                if nodes.right is not None:
+                    next_level.append(nodes.right)
+            level = level + 1
+            this_level = next_level
+
     class Node:
         def __init__(self, value):
             self.value = value
