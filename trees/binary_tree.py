@@ -10,21 +10,20 @@ class BinaryTree:
 
     def insert(self, node):
         if self.root_node is None:
-            print("new root")
             self.root_node = node
-            print('root', self.root_node.value)
         else:
             node_depth = self._find_insert_node(self.root_node, node)
-            print(node_depth)
 
             if node_depth > self.depth:
                 self.depth = node_depth
             elif node_depth > self.max_depth:
                 raise Exception('Max depth exceeded.')
-        return node
 
     def _find_insert_node(self, par_node, node, recursion_depth=0):
         recursion_depth = recursion_depth + 1
+        if recursion_depth > self.max_depth:
+            raise Exception('Max depth exceeded.')
+
         if par_node.value > node.value and par_node.left is not None:
             return self._find_insert_node(par_node.left, node, recursion_depth=recursion_depth)
         elif par_node.value > node.value and par_node.left is None:
