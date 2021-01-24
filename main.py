@@ -1,16 +1,18 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from trees import binary_tree as bt
+from trees import regression_tree as rt
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def main():
+    #  Example usage:
+    tree = bt.BinaryTree(max_depth=2)
+    tree.insert(bt.BinaryTree.Node(5))
+
+    reg_tree = rt.RegressionTree(max_depth=3)
+    inserted_node = reg_tree.insert(rt.RegressionTree.Node(rss=12, argmin=2))
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    main()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+
