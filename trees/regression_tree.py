@@ -43,4 +43,4 @@ class RegressionTree(BinaryTree):
                 return self.features_split_point_dict[self.feature_key] >= o.features_split_point_dict[self.feature_key]
 
             def __repr__(self):
-                return '{}\r{}'.format(self.label, self.features_split_point_dict)
+                return '{}\n{}'.format(self.feature_key, self.features_split_point_dict)

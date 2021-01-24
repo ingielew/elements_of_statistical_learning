@@ -37,6 +37,7 @@ class BinaryTree:
         else:
             raise Exception("BinaryTree: Duplicated value")
 
+# https://stackoverflow.com/questions/1894846/printing-bfs-binary-tree-in-level-order-with-specific-formatting
     def print_tree(self):
         this_level = [self.root_node]
 
