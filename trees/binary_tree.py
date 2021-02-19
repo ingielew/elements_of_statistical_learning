@@ -43,6 +43,7 @@ class BinaryTree:
 
         level = 0
         while this_level:
+            print('__________________________')
             print('Tree level', level)
             next_level = list()
             for nodes in this_level:

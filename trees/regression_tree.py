@@ -18,11 +18,11 @@ class RegressionTree(BinaryTree):
             super(RegressionTree.Node, self).__init__(self.NodeValue(features_split_points_dict, feature_key))
 
         def __repr__(self):
-            return '{}\n{}\nc_l: {},c_r: {},\nleaf: {}'.format(
+            return '- - - - - - -\n{}\n{}\nc_l: {},c_r: {},\nleaf: {}'.format(
                 self.label, self.feature_split_points_dict, self.c_left, self.c_right, self.is_leaf())
 
         def __str__(self):
-            return '{}\n{}\nc_l: {},c_r: {},\nleaf: {}'.format(
+            return '- - - - - - -\n{}\n{}\nc_l: {},c_r: {},\nleaf: {}'.format(
                 self.label, self.feature_split_points_dict, self.c_left, self.c_right, self.is_leaf())
 
         class NodeValue:  # Takie zagniezdzenie deklarowanych klas to juz patologia ale nie mialem lepszego pomyslu
