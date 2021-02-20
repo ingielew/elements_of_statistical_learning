@@ -8,6 +8,7 @@ def test(x_tab, y_tab, divisions_tab, division_num, min_observations):
     sse_min_global = float("Inf")
     chosen_point_global = float("Inf")
     sse = 0.0
+
     for i in range(0, division_num+1):
         start_point = divisions_tab[i]
         end_point = divisions_tab[i+1]
